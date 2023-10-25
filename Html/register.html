@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Form Validation</title>
+    </head>
+    <body bgcolor="cyan">
+        <form action="register.html" method="post" name="form" onsubmit="return register()">
+            Name: <input type="text" name="Name"><br><br>
+            Email: <input type="text" name="Email"><br><br>
+            Password: <input type="password" name="Password"><br><br>
+            Country: <select name="Country">
+                <option value="1">UK</option>
+                <option value="2">USA</option>
+                <option value="2">Korea</option>
+                <option value="2">Myanmar</option>
+            </select><br><br>
+            <input type="submit" value="Register">
+            <input type="reset" value="Clear">
+        </form>
+        <script>
+            function register(){
+                var name=document.form.Name.value;
+                var email=document.form.Email.value;
+                var password=document.form.Password.value;
+                if(name == Null || name == ""){
+                    alert("Name can't be blank");
+                    return false;   
+                }
+                else if(email == Null || email == ""){
+                    alert("Name can't be blank");
+                    return false;
+                }
+                else if(password.length<6){
+                    alert("Password must be at least 6");
+                    return false;
+                }
+                else{
+                    alert("Thank You");
+                }
+            }
+        </script>
+    </body>
+</html>
